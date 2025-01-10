@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+.titulo-skills {
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #d7df39;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Anton", sans-serif;
+  margin-top: 100px;
+  border: 2px solid #d7df39;
+  padding: 10px;
+}
+
+.contenedor-iconos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  justify-content: center;
+  padding: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
+.icono {
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon {
+  font-size: 50px;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #005999;
+}
+
+#html {
+  color: #e44d26;
+}
+#css {
+  color: #264de4;
+}
+#javascript {
+  color: #f0db4f;
+}
+#react {
+  color: #61dbfb;
+}
+#tailwind {
+  color: #818fd0;
+}
+#git {
+  color: #f34f29;
+}
+#github {
+  color: #f34f29;
+}
+#php {
+  color: #818fd0;
+}
+#mysql {
+  color: #0c88a4;
+}
+#mongodb {
+  color: #47a248;
+}
+
+@media (max-width: 768px) {
+  .contenedor-iconos {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columnas en pantallas pequeñas */
+  }
+
+  .icon {
+    font-size: 40px; /* Reducir el tamaño de los íconos en pantallas pequeñas */
+  }
+}

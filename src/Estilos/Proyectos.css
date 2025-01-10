@@ -1,0 +1,217 @@
+/* Establece un estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#proyectos {
+  background-color: #2734aa57;
+}
+
+/* Contenedor principal de la sección */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido */
+  padding: 20px; /* Espaciado interno */
+}
+.titulo-proyectos-todos {
+  font-size: 2rem;
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(59, 59, 149);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 100px;
+  border: 2px solid rgb(59, 59, 149);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Título de la sección */
+.titulo-proyectos {
+  font-size: 2rem;
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 100px;
+  border: 2px solid rgb(59, 59, 149);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Estilos para la grilla de proyectos */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 12px; /* Espacio reducido entre las columnas */
+  width: 100%;
+  max-width: 960px; /* Ancho máximo para la grilla */
+  place-items: center; /* Centra las tarjetas dentro de la grilla */
+}
+
+/* Estilos para cada tarjeta */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  max-width: 300px; /* Establece un tamaño máximo para las tarjetas */
+  display: flex;
+  flex-direction: column; /* Organiza el contenido dentro de la tarjeta */
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen de la tarjeta */
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Contenido dentro de la tarjeta */
+.card-content {
+  padding: 15px;
+  text-align: center;
+  background-color: #113d6d;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+/* Título dentro de la tarjeta */
+.card-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+/* Descripción dentro de la tarjeta */
+.card-description {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+/* Estilo del enlace dentro de la tarjeta */
+.card-link {
+  display: block;
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Estilo al pasar el ratón por el enlace */
+.card-link:hover {
+  background: #0056b3;
+}
+
+/* Animación al pasar el ratón sobre la tarjeta */
+.card:hover {
+  transform: translateY(-10px); /* Desliza hacia arriba */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+}
+
+/* Animación para los iconos de tecnologías al pasar el ratón */
+@keyframes iconAnimation {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tech-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Animación de rebote para los iconos al hacer hover */
+.card:hover .tech-icons {
+  animation: iconAnimation 0.6s ease-in-out;
+}
+.boton-retorno {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.retorno-link {
+  display: inline-block;
+  background: linear-gradient(45deg, #61dbfb, #264de4);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.retorno-link:hover {
+  background: linear-gradient(45deg, #264de4, #61dbfb);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Botón de retorno */
+/* .boton-retorno {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.retorno-link {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.retorno-link:hover {
+  background-color: #007bff;
+  color: #fff;
+} */
+
+/* Enlace de ver más proyectos */
+.ver-mas-link {
+  display: block;
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ver-mas-link:hover {
+  background: #0056b3;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 450px) {
+  .proyectos-grid {
+    grid-template-columns: repeat(1, 1fr); /* Una sola columna */
+  }
+}

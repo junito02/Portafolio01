@@ -1,0 +1,160 @@
+/* Estilo para el título del formulario */
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #19767c; /* Puedes personalizar el color */
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* --- Formulario --- */
+.contact-form {
+  background: #1e293b; /* Fondo azul petróleo */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+  width: 90%; /* Ocupa el 90% del ancho disponible */
+  max-width: 600px; /* Ancho máximo */
+  margin: 0 auto; /* Centra horizontalmente */
+  border: 3px solid transparent; /* Borde inicial transparente */
+  background-clip: padding-box;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 200px;
+}
+
+/* Contenedor principal para centrar vertical y horizontal */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  padding: 20px; /* Espaciado alrededor del contenedor */
+  background-color: #0c0e1b; /* Fondo del body */
+  box-sizing: border-box;
+}
+
+/* Borde degradado */
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #ffd700,
+    #2c3e50,
+    #ffd700
+  ); /* Degradado dorado */
+  border-radius: 20px;
+  filter: blur(8px);
+  transition: opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+.contact-form:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+}
+
+.contact-form:hover::before {
+  opacity: 1;
+}
+
+/* Etiquetas */
+.contact-form label {
+  font-weight: bold;
+  color: #f8f9fa; /* Blanco ahumado */
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Campos de entrada */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #2c3e50; /* Azul grisáceo oscuro */
+  border-radius: 8px;
+  background: #2c3e50; /* Fondo del campo */
+  color: #f8f9fa; /* Texto blanco */
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffd700; /* Borde dorado */
+  outline: none;
+}
+
+/* Botón */
+.contact-form button {
+  background: #ffd700; /* Fondo dorado */
+  color: #1e293b; /* Texto azul petróleo */
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #d4af37; /* Dorado intenso */
+  transform: translateY(-3px);
+}
+
+/* Mensajes */
+.contact-form .message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.contact-form .success {
+  background-color: #28a745; /* Verde éxito */
+  color: #f8f9fa;
+}
+
+.contact-form .error {
+  background-color: #dc3545; /* Rojo error */
+  color: #f8f9fa;
+}
+
+/* Spinner */
+.contact-form .spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(248, 249, 250, 0.2); /* Blanco ahumado translúcido */
+  border-top: 2px solid #ffd700; /* Dorado */
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Ajustes Responsivos --- */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem; /* Reduce el padding en pantallas pequeñas */
+  }
+}

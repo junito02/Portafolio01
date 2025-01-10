@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+#Acerca {
+  background-color: #2734aa57;
+}
+
+.Acerca {
+  margin: 0;
+  padding: 0;
+  margin-top: 150px;
+  width: 100%;
+}
+.titulo-acerca {
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  width: 50%;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.855);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contenedor-acerca {
+  display: flex;
+  flex-direction: row; /* Mantener en fila por defecto */
+  align-items: center; /* Alinear al centro */
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.texto {
+  width: 50%; /* Ancho del texto */
+  padding: 20px;
+  line-height: 1.2;
+  font-size: 20px;
+  text-align: left; /* Alineación a la izquierda */
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-acerca {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: 100px;
+  box-shadow: 0 0 10px rgb(22, 50, 56);
+}
+
+/* Media Queries para responsividad */
+
+@media (max-width: 768px) {
+  .contenedor-acerca {
+    display: flex; /* Asegúrate de que el contenedor use flexbox */
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    align-items: center; /* Centrar elementos */
+    justify-content: center; /* Centrar elementos */
+  }
+
+  .titulo-acerca {
+    width: 100%; /* Ancho del título ajustado */
+    text-align: center; /* Centrar título en pantallas pequeñas */
+    font-size: 30px;
+  }
+
+  .texto {
+    width: 100%; /* Ancho del texto ajustado */
+    text-align: center; /* Centrar texto en pantallas pequeñas */
+    order: 2; /* Asegurar que el texto esté debajo de la imagen */
+    max-width: 500px; /* Ancho máximo opcional para el texto */
+    align-items: center;
+  }
+
+  .img-acerca {
+    margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+    margin-bottom: 20px; /* Espacio inferior */
+    order: 1; /* Asegurar que la imagen esté arriba */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  }
+}
+
+@media (max-width: 480px) {
+  .texto {
+    font-size: 18px; /* Reducir tamaño de fuente */
+    width: 100%;
+    text-align: center;
+  }
+
+  .titulo-acerca {
+    font-size: 30px; /* Reducir tamaño de fuente */
+  }
+}
+
+@media (max-width: 360px) {
+  .texto {
+    font-size: 16px; /* Reducir tamaño de fuente */
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .titulo-acerca {
+    font-size: 25px; /* Reducir tamaño de fuente */
+  }
+}

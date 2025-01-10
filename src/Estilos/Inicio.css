@@ -1,0 +1,196 @@
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+/* Animación de entrada para la sección de inicio */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contenedor {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.imagen {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 50px;
+  border: 5px solid rgb(22, 50, 56);
+  box-shadow: 0 0 10px rgb(22, 50, 56);
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagen:hover {
+  transform: scale(1.1);
+}
+
+.contenedor-boton {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre los botones */
+  margin-top: 30px;
+  width: 100%;
+  flex-wrap: wrap; /* Ajusta los botones en pantallas pequeñas */
+}
+
+/* Botones generales */
+.boton-CV,
+.boton-GIT,
+.boton-LINKEDIN {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  gap: 8px; /* Espaciado entre el ícono y el texto */
+}
+
+.boton-LINKEDIN,
+.boton-GIT {
+  width: 80px; /* Mantiene ancho original */
+  height: 40px; /* Mantiene altura original */
+  background-color: #0077b5; /* Color de LinkedIn */
+}
+
+.boton-LINKEDIN:hover,
+.boton-LINKEDIN:focus {
+  background-color: #005b85;
+  outline: 2px solid #ffffff; /* Mejora accesibilidad */
+  outline-offset: 2px;
+}
+
+.boton-GIT {
+  background-color: #333333;
+}
+
+.boton-GIT:hover,
+.boton-GIT:focus {
+  background-color: #555555;
+  outline: 2px solid #ffffff; /* Mejora accesibilidad */
+  outline-offset: 2px;
+}
+
+.boton-CV {
+  width: 100px; /* Mantiene ancho original */
+  height: 40px; /* Mantiene altura original */
+  background-color: #1bc8d4;
+}
+
+.boton-CV:hover,
+.boton-CV:focus {
+  background-color: #1a8c9d;
+  outline: 2px solid #ffffff; /* Mejora accesibilidad */
+  outline-offset: 2px;
+}
+
+.boton-LINKEDIN:hover,
+.boton-GIT:hover,
+.boton-CV:hover {
+  transform: translateY(-5px); /* Movimiento al hover */
+}
+
+/* Títulos */
+.saludo {
+  font-size: 20px;
+  color: #1bc8d4;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.nombre {
+  font-size: 50px;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.profesion {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #1bc8d4;
+  font-family: "Anton", sans-serif;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 10px;
+  }
+
+  .imagen {
+    width: 180px;
+    height: 180px;
+  }
+
+  .nombre {
+    font-size: 40px;
+  }
+
+  .saludo,
+  .profesion {
+    font-size: 18px;
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 900px) {
+  .contenedor {
+    padding: 20px;
+  }
+
+  .imagen {
+    width: 180px;
+    height: 180px;
+  }
+
+  .nombre {
+    font-size: 40px;
+  }
+
+  .saludo,
+  .profesion {
+    font-size: 18px;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  overflow: hidden;
+}

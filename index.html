@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Junior Alejandro, desarrollador web."
+    />
+    <meta property="og:title" content="Portfolio - Junior Alejandro" />
+    <meta
+      property="og:description"
+      content="Desarrollador Web con experiencia en React, HTML, CSS y JavaScript."
+    />
+    <meta property="og:image" content="/src/Imagenes/portafollio-icono.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Pre-cargar fuentes y archivos esenciales -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      as="style"
+    />
+    <link rel="preload" href="/src/main.css" as="style" />
+    <link rel="preload" href="/src/Imagenes/portafollio-icono.svg" as="image" />
+
+    <!-- Favicon optimizado -->
+    <link
+      rel="icon"
+      href="/src/Imagenes/portafollio-icono.svg"
+      type="image/svg+xml"
+    />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Cargar JavaScript con defer para mejorar el rendimiento -->
+    <script type="module" src="/src/main.jsx" defer></script>
+  </body>
+</html>
