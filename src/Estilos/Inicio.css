@@ -80,7 +80,6 @@
 .boton-LINKEDIN:hover,
 .boton-LINKEDIN:focus {
   background-color: #005b85;
-  outline: 2px solid #ffffff; /* Mejora accesibilidad */
   outline-offset: 2px;
 }
 
@@ -91,7 +90,6 @@
 .boton-GIT:hover,
 .boton-GIT:focus {
   background-color: #555555;
-  outline: 2px solid #ffffff; /* Mejora accesibilidad */
   outline-offset: 2px;
 }
 
@@ -104,7 +102,7 @@
 .boton-CV:hover,
 .boton-CV:focus {
   background-color: #1a8c9d;
-  outline: 2px solid #ffffff; /* Mejora accesibilidad */
+  /* Mejora accesibilidad */
   outline-offset: 2px;
 }
 
