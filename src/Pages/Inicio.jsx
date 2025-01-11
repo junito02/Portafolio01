@@ -24,7 +24,7 @@ function Inicio() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/junior-alejandro-a3b426343/"
+            href="https://www.linkedin.com/in/junior-alejandro-836684344/"
             className="LINKEDIN"
             aria-label="Ir a mi perfil de LinkedIn"
           >
